@@ -5,6 +5,9 @@ import 'list_view.dart';
 void main() {
   runApp(
     MaterialApp(
+        theme: ThemeData(
+          fontFamily: "",
+        ),
         debugShowCheckedModeBanner: false,
         title: ("demo_project"),
 
