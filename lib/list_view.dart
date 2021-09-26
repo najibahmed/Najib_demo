@@ -12,6 +12,15 @@ class Listview extends StatelessWidget {
     "+8801670819177",
     "+8801720191748",
     "+8801622277155",
+    "+8801758891019",
+    "+8801777111124",
+    "+8801760487590",
+    "+8801983091400",
+    "+8801777111192",
+    "+8801711338657",
+    "+8801676754515",
+    "+8801670818990",
+    "+8801710770365",
   ];
   List names = [
     "Israt Ara",
@@ -22,13 +31,21 @@ class Listview extends StatelessWidget {
     "Ismat Ara",
     "Rahat ara",
     "Tafhimul Hasan",
+    "Jamima Jui",
+    "Sumaya Azad",
+    "Nayun Ahmed",
+    "Sadia Afrin",
+    "Ashikul Islam Azad",
+    "Masum Billah",
+    "Rofiqul Islam Soyeb",
+    "Jakia Farjana",
+    "Maria Islam Boby",
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.blue,
-          leading: Icon(Icons.menu),
           title: Text(
             "Contacts",
             style: TextStyle(
@@ -51,7 +68,7 @@ class Listview extends StatelessWidget {
           );
         },
         padding: EdgeInsets.symmetric(horizontal: 5),
-        itemCount: contact.length,
+        itemCount: names.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             onTap: () {},
@@ -77,6 +94,117 @@ class Listview extends StatelessWidget {
             ),
           );
         },
+      ),
+      drawer: Drawer(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset("assets/gmail_background.jfif"),
+                  Positioned(
+                    left: 20,
+                    top: 20,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          radius: 48,
+                          backgroundImage: AssetImage("assets/happy_man.jpg"),
+                        ),
+                        Text(
+                          "Najib Ahmed",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "najibahmed50@gmail.com",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white.withOpacity(.50),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    top: 10,
+                    right: 15,
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 14,
+                          backgroundImage: AssetImage("assets/happy_man.jpg"),
+                        ),
+                        SizedBox(width: 5),
+                        CircleAvatar(
+                          radius: 14,
+                          backgroundImage: AssetImage("assets/happy_man.jpg"),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    right: 15,
+                    bottom: 5,
+                    child: Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.white.withOpacity(.50),
+                      size: 30,
+                    ),
+                  ),
+                ],
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.circle),
+                title: Text("Short title"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.circle),
+                title: Text("A little longer title"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.circle),
+                title: Text("A very long title that trancat the list"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.circle),
+                title: Text("A Shorter title"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.circle),
+                title: Text("Short title"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.circle),
+                title: Text("A Shorter title"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.settings),
+                title: Text("Settings"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.feedback_outlined),
+                title: Text("Feedback"),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.logout_rounded),
+                title: Text("Log Out"),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
