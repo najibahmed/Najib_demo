@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:najib_project/drawerpage.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,55 +18,61 @@ class HomePage extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
+        centerTitle: true,
       ),
       body: Container(
         color: Colors.indigo,
         width: double.infinity,
         height: double.infinity,
         padding: EdgeInsets.all(30),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
           children: [
             // circuler image profile picture
-            CircleAvatar(
-              radius: 60,
-              foregroundImage: AssetImage("assets/happy_man.jpg"),
-            ),
-            const SizedBox(height: 20),
-            // text with name
-            Container(
-              child: Text(
-                "Najib Ahmed",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: "Lobster",
-                  fontSize: 32,
-                  letterSpacing: 5.0,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 60,
+                  foregroundImage: AssetImage("assets/happy_man.jpg"),
                 ),
-              ),
-            ),
-            // text with developer
-            Container(
-              child: Text(
-                "Flutter Developer",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: "Playball",
-                  fontSize: 32,
-                  letterSpacing: 5.0,
+                const SizedBox(height: 20),
+                // text with name
+                Container(
+                  child: Text(
+                    "Najib Ahmed",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: "Lobster",
+                      fontSize: 32,
+                      letterSpacing: 5.0,
+                    ),
+                  ),
                 ),
-              ),
+                // text with developer
+                Container(
+                  child: Text(
+                    "Flutter Developer",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: "Playball",
+                      fontSize: 32,
+                      letterSpacing: 5.0,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                // bar between objects
+                Container(
+                  width: 200,
+                  height: 1,
+                  color: Colors.white,
+                ),
+                const SizedBox(height: 30),
+              ],
             ),
-            const SizedBox(height: 10),
-            // bar between objects
-            Container(
-              width: 200,
-              height: 1,
-              color: Colors.white,
-            ),
-            const SizedBox(height: 30),
+
             // for phone number container
             Container(
               width: double.infinity,
@@ -118,6 +125,26 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ]),
+            ),
+            SizedBox(height: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Drawerpage()));
+                    },
+                    child: Icon(Icons.arrow_forward_ios)),
+                SizedBox(height: 20),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.arrow_back_ios)),
+              ],
             ),
           ],
         ),
