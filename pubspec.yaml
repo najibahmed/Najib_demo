@@ -72,6 +72,7 @@ flutter:
     - family: SourcecodePro
       fonts:
         - asset: assets/fonts/SourceCodePro-Regular.ttf
+        - asset: assets/fonts/SourceCodePro-Bold.ttf
         
   
   # For details regarding fonts from package dependencies,
