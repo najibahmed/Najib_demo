@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:najib_project/screen_one.dart';
+import 'package:najib_project/bottomNavigation.dart';
 
 void main() {
   runApp(
@@ -13,7 +13,8 @@ void main() {
       // home: Stackpage(),
       // home: Listview(),
       // home: Drawerpage(),
-      home: ScreenOne(),
+      // home: ScreenOne(),
+      home: HomeScreen(),
     ),
   );
 }
