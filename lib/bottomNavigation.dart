@@ -93,6 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
         notchMargin: 12,
         color: Colors.blue,
         elevation: 0,
+
         // child: Container(
         //   height: 60,
         //   child: Padding(
