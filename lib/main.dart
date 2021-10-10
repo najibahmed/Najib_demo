@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:najib_project/bottomNavigation.dart';
+import 'package:najib_project/BMI/bmi_calculator.dart';
 
 void main() {
   runApp(
@@ -14,7 +14,7 @@ void main() {
       // home: Listview(),
       // home: Drawerpage(),
       // home: ScreenOne(),
-      home: HomeScreen(),
+      home: BmiScreen(),
     ),
   );
 }
