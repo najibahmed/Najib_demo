@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:najib_project/home_page.dart';
 
 class ScreenThree extends StatelessWidget {
-  const ScreenThree({Key? key}) : super(key: key);
-
+  final String? name;
+  final String? pass;
+  const ScreenThree({this.name, this.pass});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +29,11 @@ class ScreenThree extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: Icon(Icons.navigate_before)),
+            SizedBox(
+              height: 20,
+            ),
+            Text("$name"),
+            Text("$pass")
           ],
         ),
       ),
